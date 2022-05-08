@@ -1,0 +1,62 @@
+1. Write a query to get all data of actor.
+select * from actor;
+2. Write a query to get email and last name of customer.
+select last_name,email from customer;
+3. Write a query to get title, description and release year of film.
+select title, description,release_year from film;
+4. Query city and country id in the city table.
+select city,city_id from city;
+5. Write a query to get amount, payment date and customer id from customer table.
+
+6. Write a query to get all data of language.
+select * from language;
+7. Query all columns for a payment in payment table with customer id 10.
+select * from payment where customer_id=10;
+8. Query last name and first name of customers in customer table whose first names are "Mary"
+select first_name,last_name from customer where first_name ='Mary';
+9. Query last name and first name of customers in customer table whose first names are "Mary" and last names are "Smith".
+select first_name,last_name from customer where first_name ='Mary' and last_name='Smith';
+10. Query last name and first name of customers in customer table whose first names are "Susan" or last names are "Jones".
+select first_name,last_name from customer where first_name ='Mary' and last_name='Smith';
+11. Query email of customers in customer table whose first name is "Mar", "Mary" or "Mari".
+1)select email from customer where first_name = 'Mar' or first_name ='Mary' or first_name ='Mari';
+2)select email from customer where first_name IN('Mar','Mary' ,'Mari');
+12. Query last name and first name of customers in customer table whose first names start with "Ma".
+select first_name,last_name from customer where first_name LIKE 'Ma%';
+13. Write a query to get staff id, first name and username of staff in staff table whose staff id is 10.
+select staff_id, first_name,username from staff where staff_id='10';
+14. Query last name and first name of customers in customer table whose first name start with letter "M" and contains 3 to 5 characters.
+1)select first_name,last_name from customer where first_name LIKE 'M%' and LENGTH(first_name)>3 and LENGTH(first_name)<5;
+2)select first_name,last_name from customer where first_name LIKE 'M%' and LENGTH(first_name) BETWEEN 3 AND 5;
+15. Query last name and first name of customers in customer table whose first names start with "Bra" and last names are not "Motley".
+select first_name,last_name from customer where first_name LIKE 'Bra%' and last_name <> 'Motley';
+16. Query store id of stores that have more than 300 customers in customer table.
+
+17. Write a query to select all details of the only customers who have been spending more than 200 in customer table.
+
+18. Query all columns in film table where the film_id is less than 4.
+select * from film where film_id<4;
+19. Write a query to get all data from address table.
+select * from address;
+20. Query rental date, customer id and rental id in rental table when rental date is 2005-05-25.
+select rental_id, rental_date, customer_id from rental where rental_date='2005-05-25';
+21. Query all columns for customers in customer table with store id 2 or customer id 7.
+select * from customer where store_id=2 or customer_id=7;
+22. Query all columns for customers in customer table who have spent amount more than $200.
+
+23. Query amount and payment_date from payment where the amount paid was less than $2.
+select amount,payment_date from payment where amount <2;
+24. Write a query to get a list of actors with the first name Chris, Cameron, or Cuba.
+select first_name,last_name from actor where first_name IN('Chris','Cameron','Cuba');
+25. Query last name of customers in customer table whose first names are "John".
+select last_name,first_name from customer where first_name='John';
+26. Write a query to get staff id, first name and username of staff in staff table whose store id is less than 6.
+select staff_id,first_name,username from staff where staff_id<6;
+27. Write a query to get release year, rental duration and rental rate of films in film table.
+select release_year,rental_duration,rental_rate from film;
+28. Write a query to get city id and country id of country in country table whose name is "New York".
+
+29. Write a query to get all data of city table.
+select * from city;
+30. Write a query to get film id of film in film_category table with category_id 2.
+select film_id from film_category where category_id=2;
